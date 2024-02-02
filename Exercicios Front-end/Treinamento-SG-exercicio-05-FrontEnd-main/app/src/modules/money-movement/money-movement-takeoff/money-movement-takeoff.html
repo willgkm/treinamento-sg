@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="display-4">Operação de saque</h1>
+  <p class="lead">Para realizar um saque, digite a conta de onde será feito o saque, e a quantia que será
+    sacada</p>
+  <div class="col">
+    <hr class="my-4">
+  </div>
+  
+
+
+  <form name="saqueForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="text" ng-model="saque.id" placeholder="Informe o ID..." ng-required="true">
+
+      <input class="form-control form-control-lg" type="number" ng-model="saque.valor" placeholder="Informe o valor do saque"
+        ng-required="true">
+
+  </form>
+
+  <hr class="my-4">
+  <p>Certifiquece de conferir a conta que irá ser realizada o saque</p>
+  <p class="lead">
+    <button class="btn btn-primary btn-lg" role="button" ng-click="$ctrl.onTakeoff(saque)">Sacar</button>
+  </p>
+</div>

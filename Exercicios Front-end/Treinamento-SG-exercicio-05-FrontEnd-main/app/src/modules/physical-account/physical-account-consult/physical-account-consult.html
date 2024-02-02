@@ -1,0 +1,39 @@
+<div class="jumbotron">
+	<div class="row">
+		<div class="col-12">
+			<h1 class="display-4">Consulta de contas fisica</h1>
+
+			<p class="lead">Nessa tela será mostrado uma lista os dados contas fisicas cadastradas</p>
+			<hr class="my-4">
+		</div>
+
+
+	</div>
+
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Conta</th>
+				<th scope="col">Agencia</th>
+				<th scope="col">Nome do cliente</th>
+				<th scope="col">CPF </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="contaFisica in $ctrl.contasFisicas">
+				<th><a class="corDoLink" ng-click="$ctrl.open()">{{contaFisica.id}}</a></th>
+				<td>{{contaFisica.agencia}}</td>
+				<td>{{contaFisica.clienteFisico.nome}}</td>
+				<td>{{contaFisica.clienteFisico.cpf}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr class="my-4">
+
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="/" role="button">Voltar para o menu</a>
+	</p>
+
+
+</div>

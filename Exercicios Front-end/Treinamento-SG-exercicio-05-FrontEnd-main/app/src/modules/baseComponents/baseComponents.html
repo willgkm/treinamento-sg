@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light rounded" >
+  <a class="navbar-brand" href="#">Santau</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Clientes Fisicos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/physical-cliente/create">Cadastrar Clientes Fisico  </a>
+          <a class="dropdown-item" href="/#!/physical-cliente/consult">Consultar Clientes Fisico  </a>
+          <a class="dropdown-item" href="/#!/physical-cliente/update">Alterar Clientes Fisico  </a>
+          <a class="dropdown-item" href="/#!/physical-cliente/delete">Deletar Clientes Fisico  </a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Clientes Juridico
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/legal-cliente/create">Cadastrar Clientes juridicos</a>
+          <a class="dropdown-item" href="#">Consultar Clientes juridicos</a>
+          <a class="dropdown-item" href="#">Alterar Clientes juridicos</a>
+          <a class="dropdown-item" href="#">Deletar Clientes juridicos</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Conta Fisica
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/physical-account/create">Criar conta pessoa fisica</a>
+          <a class="dropdown-item" href="/#!/physical-account/consult">Consultar conta pessoa fisica</a>
+          <a class="dropdown-item" href="/#!/physical-account/update">Alterar conta pessoa fisica</a>
+          <a class="dropdown-item" href="/#!/physical-account/delete">Deletar conta pessoa fisica</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Conta Juridica
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/legal-account/create">Criar conta pessoa Juridica</a>
+          <a class="dropdown-item" href="#">Consultar conta pessoa Juridica</a>
+          <a class="dropdown-item" href="#">Alterar conta pessoa Juridica</a>
+          <a class="dropdown-item" href="#">Deletar conta pessoa Juridica</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Conta Poupança 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/saving-account/create">Criar conta pessoa Poupança</a>
+          <a class="dropdown-item" href="#">Consultar conta pessoa Poupança</a>
+          <a class="dropdown-item" href="#">Alterar conta pessoa Poupança</a>
+          <a class="dropdown-item" href="#">Deletar conta pessoa Poupança</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Operações
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/#!/money-movement/deposit">Depositar</a>
+          <a class="dropdown-item" href="/#!/money-movement/takeoff">Sacar</a>
+          <a class="dropdown-item" href="/#!/money-movement/transfer">Transferir</a>
+          <a class="dropdown-item" href="/#!/money-movement/statement">Gerar Extrato</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<ui-view></ui-view>
+
+<footer class="py-3 my-4">
+  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Pagina inicial</a></li>
+    <li class="nav-item"><a href="/#!/money-movement/deposit" class="nav-link px-2 text-muted">Deposito</a></li>
+    <li class="nav-item"><a href="/#!/money-movement/takeoff" class="nav-link px-2 text-muted">Saque</a></li>
+    <li class="nav-item"><a href="/#!/money-movement/transfer" class="nav-link px-2 text-muted">transferencia</a></li>
+    <li class="nav-item"><a href="/#!/money-movement/statement" class="nav-link px-2 text-muted">Extratos</a></li>
+  </ul>
+  <p class="text-center text-muted">© 2021 Company, Inc</p>
+</footer>

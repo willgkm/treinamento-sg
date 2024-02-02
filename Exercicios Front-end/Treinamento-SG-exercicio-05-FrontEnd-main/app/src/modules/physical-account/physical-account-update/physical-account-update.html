@@ -1,0 +1,32 @@
+<div class="jumbotron">
+  <div class="col-12">
+    <h1 class="display-4">Cadastro de pessoa fisica</h1>
+
+    <p class="lead">Para efetuar o cadastro de uma nova Pessoa fisica, insira o nome e o CPF </p>
+    <hr class="my-4">
+  </div>
+
+
+  <form name="alterarFisicoForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="number" ng-model="alterarFisico.id" placeholder="Conta..." ng-required="true">
+
+      <input class="form-control form-control-lg" type="number" ng-model="alterarFisico.agencia" placeholder="Agencia..." ng-required="true"
+        ng-minlength="2">
+
+      <input class="form-control form-control-lg" type="number" ng-model="alterarFisico.clienteFisico.id" placeholder="Cliente Fisico..." ng-required="true" >
+    
+    </div>
+  </form>
+
+  <div class="col-12">
+
+    <hr class="my-4">
+  </div>
+
+  <div class="button">
+    <button type="button" class="btn btn-info" ng-click="$ctrl.alterarPhysiscalClient(alterarFisico)">Cadastrar pessoa
+      fisisca</button>
+  </div>
+</div>

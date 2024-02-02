@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-3">
+            <div class="navegation-button">
+                <a href="/#!/campeonatos" class="btn btn-primary">Lista de Campeonatos</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <h4>Detalhe do campeonatos</h4>
+        </div>
+
+    </div>
+
+
+    <table class="table table-light table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Excluir</th>
+                <th>Times</th>
+                <th>Pontos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="infoCamp in infoCamp">
+                <td><button type="button" class="btn btn-danger btn-sm" ng-click="deleteInfoCamp(infoCamp)">X</button></td>
+                <td>{{infoCamp.time.nome| name}}</td>
+                <td>{{infoCamp.pontos}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

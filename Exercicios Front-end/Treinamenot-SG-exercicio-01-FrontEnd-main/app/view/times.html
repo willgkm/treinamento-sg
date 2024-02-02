@@ -1,0 +1,53 @@
+<div class="jumbotron">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="navegation-button">
+                <a href="/#!/campeonatos" class="btn btn-primary">Lista de Campeonatos</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <h4>Lista de Times </h4>
+        </div>
+
+    </div>
+
+    <table class="table table-light table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Excluir</th>
+                <th>Nome do Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-class="{negrito: time.selecionado}" ng-repeat="time in times">
+                <td><button type="button" class="btn btn-danger btn-sm" ng-click="deleteTime(time)">X</button></td>
+                <td>{{time.nome | name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <form name="timeForm">
+        <div class="name-input">
+            <input class="form-control" type="text" ng-model="time.nome" name="nome" placeholder="Nome" ng-required="true"
+                ng-minlength="2">
+        </div>
+    </form>
+    
+    <div ng-messages="timeForm.nome.$error" class="alert alert-danger">
+        <div ng-message="required">
+            <div>
+                Por favor, preencha o campo nome!
+            </div>
+        </div>    
+        <div ng-message="minlength">
+            <div>
+                O nome deve conter no minimo 2 letras!
+            </div>
+        </div>
+    </div>
+
+    <div class="button">
+        <button class="btn btn-primary btn-block" ng-click="adicionarTime(time)" ng-disabled="timeForm.$invalid ">Adicionar
+            time</button>
+    </div>
+</div>

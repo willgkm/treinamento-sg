@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <div class="col-12">
+    <h1 class="display-4">Cadastro de pessoa fisica</h1>
+
+    <p class="lead">Para efetuar o cadastro de uma nova Pessoa fisica, insira o nome e o CPF </p>
+    <hr class="my-4">
+  </div>
+
+
+  <form name="clienteFisicoForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="text" ng-model="clienteFisico.nome" placeholder="Nome..." ng-required="true"
+        ng-minlength="3">
+
+      <input class="form-control form-control-lg" type="text" ng-model="clienteFisico.cpf" placeholder="CPF..." ng-required="true"
+        ng-minlength="3">
+    </div>
+  </form>
+  <div class="col-12">
+
+    <hr class="my-4">
+  </div>
+
+  <div class="button">
+    <button type="button" class="btn btn-info" ng-click="$ctrl.createPhysiscalClient(clienteFisico)">Cadastrar pessoa
+      fisisca</button>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-3">
+            <div class="navegation-button">
+                <a href="/#!/times" class="btn btn-primary">Lista de times</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <h4>Lista de Campeonatos</h4>
+        </div>
+        <div class="col-3">
+            <div class="add-team-in-camp-button">
+                <a href="/#!/info-camp" class="btn btn-success">Adicionar times em campeonato</a>
+            </div>
+        </div>
+    </div>
+    <table class="table table-light table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Excluir</th>
+                <th>Nome do Campeonatos</th>
+                <th>Inicio Campeonato</th>
+                <th>Termino do Campeonato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="campeonato in campeonatos">
+                <td><button type="button" class="btn btn-danger btn-sm" ng-click="deleteCampeonato(campeonato)">X</button></td>
+
+                <td><a href="#!/info-camp/detalhes/{{campeonato.id}}">{{campeonato.nomeCamp | name}}</a></td>
+                <td>{{campeonato.dataInicio | date : "dd/MM/yyyy"}}</td>
+                <td>{{campeonato.dataFim | date : "dd/MM/yyyy"}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <form name="campeonatoForm">
+        <div class="container">
+
+            <input class="form-control" type="text" ng-model="campeonato.nomeCamp" placeholder="Nome do campeonato"
+                ng-required="true" ng-minlength="3">
+            <div class="row">
+                <div class="col-3">
+                    <div class="data-label-font-size">
+                        Data de inicio:
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input class="form-control" type="date" name="dataInicio" id="dataInicio"
+                        ng-model="campeonato.dataInicio" ng-required="true">
+                </div>
+                <div class="col-3">
+                    <div class="data-label-font-size">
+                        Data de termino:
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input class="form-control" type="date" name="dataFim" id="dataFim" 
+                        ng-model="campeonato.dataFim" ng-required="true" >
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="button">
+        <button class="btn btn-primary btn-block" ng-click="adicionarCampeonato(campeonato)">Adicionar
+            campeonato</button>
+    </div>
+</div>

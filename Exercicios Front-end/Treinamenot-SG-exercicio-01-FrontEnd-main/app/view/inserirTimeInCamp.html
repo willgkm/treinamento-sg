@@ -1,0 +1,27 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-3">
+            <div class="navegation-button">
+                <a href="/#!/campeonatos" class="btn btn-primary">Lista de Campeonatos</a>
+            </div>
+        </div>
+        <div class="col-6">
+            <h4>Seleciona o time e o campeonato </h4>
+        </div>
+    </div>
+
+    <form name="infoCampForm">
+        <select class="form-control" ng-model="inserirInfoCamp.time"
+            ng-options="time.nome for time in times | orderBy:'nome'">
+            <option value="">Selecione uma time</option>
+        </select>
+        <select class="form-control" ng-model="inserirInfoCamp.campeonato"
+            ng-options="campeonato.nomeCamp for campeonato in campeonatos | orderBy:'nomeCamp'">
+            <option value="">Selecione uma campeonato</option>
+        </select>
+
+    </form>
+    <div class="button">
+        <button class="btn btn-primary btn-block" ng-click="adicionarInfoCamp()">inserir</button>
+    </div>
+</div>

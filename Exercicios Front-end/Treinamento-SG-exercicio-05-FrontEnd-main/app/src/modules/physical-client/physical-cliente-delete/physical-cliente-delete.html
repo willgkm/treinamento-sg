@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">Delete de conta fisica </h1>
+      <p class="lead">Para excluir o cadastro de uma pessoa fisica, insira o ID do cadastro da pessoa Fisica</p>
+      <div class="col">
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <form name="deleteContaFisicaForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="number" ng-model="clienteFisico.id" placeholder="Informe o ID da pessoa fisica..."
+        ng-required="true" >
+
+  </form>
+  
+  <hr>
+    <p>Certifiquece de conferir a conta que irá ser ser excluida, não existe retorno dessa operação</p>
+  <div class="button">
+    <button type="button" class="btn btn-danger btn-lg" ng-click="$ctrl.deletePhysiscalClient(clienteFisico)">Excluir</button>
+  </div>
+</div>

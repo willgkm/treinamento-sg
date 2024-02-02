@@ -1,0 +1,58 @@
+<div class="jumbotron">
+  <h1 class="display-4">Operação de saque</h1>
+  <p class="lead">Para retirar um extrato, digite a conta de onde deseja realizar a consulta, e a quantia de dias que deseja realizar a consulta</p>
+  <div class="col">
+    <hr class="my-4">
+  </div>
+
+
+
+  <form name="extratoForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg form-control form-control-lg-lg" type="number" ng-model="extrato.contaId" placeholder="Informe o ID da conta..." ng-required="true">
+
+      <input class="form-control form-control-lg form-control form-control-lg-lg" type="number" ng-model="extrato.dias" placeholder="Informe periodo do extrato em dias"
+        ng-required="true">
+
+  </form>
+
+  <hr class="my-4">
+  <p class="lead">
+    <button class="btn btn-primary btn-lg" role="button" ng-click="$ctrl.LoadStatement(extrato)">Tirar extrato</button>
+  </p>
+
+  <hr class="my-4">
+
+
+  <table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Cod. Registro</th>
+				<th scope="col">Data</th>
+				<th scope="col">Operação</th>
+				<th scope="col">Valor da Operação</th>
+				<th scope="col">Saldo apos Operação</th>
+				<th scope="col">Conta envio</th>
+				<th scope="col">Conta recebimento</th>
+        
+      </tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="extrato in $ctrl.extrato">
+				<td>{{extrato.id}}</td>
+				<td>{{extrato.dataOperacao}}</td>
+				<td>{{extrato.operacao}}</td>
+				<td>{{extrato.valorOperacao}}</td>
+				<td>{{extrato.saldoPosOperacao}}</td>
+				<td>{{extrato.contaEnvio.id}}</td>
+				<td>{{extrato.contaRecebimento.id}}</td>
+
+
+
+			</tr>
+		</tbody>
+	</table>
+
+  
+</div>

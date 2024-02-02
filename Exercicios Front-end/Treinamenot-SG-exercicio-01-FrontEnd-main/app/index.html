@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= exercicioUm>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <title>Exercicio Um</title>
+    <link rel="shortcut icon" href="#">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    
+    <script src="js/app.js"></script>
+    
+    <script src="js/Controllers/detalhesCampeonatoCtrl.js"></script>
+    <script src="js/Controllers/exercicioUmCtrl.js"></script>
+
+    <script src="js/services/timesAPIService.js"></script>
+    <script src="js/services/campeonatosAPIservice.js"></script>
+    <script src="js/services/infoCampAPIservice.js"></script>
+    
+    <script src="js/filters/nameFilter.js"></script>
+    <script src="js/config/routeConfig.js"></script>
+</head>
+
+<body>
+    
+	<div ng-view></div>
+        
+    <div ng-include="'view/footer.html'"></div>
+</body>
+</html>

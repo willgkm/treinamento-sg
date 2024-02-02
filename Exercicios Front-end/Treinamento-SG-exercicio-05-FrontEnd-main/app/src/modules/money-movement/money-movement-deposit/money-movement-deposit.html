@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">Operação de deposito</h1>
+  <p class="lead">Para realizar um deposito, digite a conta onde será feito o deposito, e a quantia que será
+    depositada</p>
+  <div class="col">
+    <hr class="my-4">
+  </div>
+
+
+  <form name="depositoForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="number" ng-model="deposito.id" placeholder="Informe o ID..." ng-required="true">
+
+      <input class="form-control form-control-lg" type="number" ng-model="deposito.valor" placeholder="Informe o valor do deposito"
+        ng-required="true">
+
+  </form>
+  <hr class="my-4">
+  <p>Certifiquece de conferir a conta que irá ser realizada o deposito</p>
+  <p class="lead">
+    <button class="btn btn-primary btn-lg" ng-click="$ctrl.onDeposit(deposito)" role="button">Depositar</button>
+  </p>
+</div>

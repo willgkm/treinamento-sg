@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">Criação de conta fisica </h1>
+      <p class="lead">Para realizar o cadastro de uma nova fisica, insira o ID do cadastro da pessoa Fisica</p>
+      <div class="col">
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <form name="contaFisicaForm">
+    <div class="container">
+
+      <input class="form-control form-control-lg" type="number" ng-model="contaFisica.clienteFisico.id" placeholder="Informe o ID da pessoa fisica..."
+        ng-required="true" >
+
+  </form>
+  
+  <hr>
+  
+  <div class="button">
+    <button type="button" class="btn btn-info" ng-click="$ctrl.createPhysicalAccount(contaFisica)">Criar conta Fisica</button>
+  </div>
+</div>
